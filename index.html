@@ -132,5 +132,25 @@ function showLetter() {
   typeWriter();
 }
     </script>
+  <script>
+function showLetter() {
+  document.getElementById("letter").style.display = "block";
+
+  const message = "Every moment with you means more than words can explain. Thank you for bringing happiness, love, and beautiful memories into my life. I hope this little surprise reminds you how much you mean to me. I am grateful for you today, tomorrow, and always. 💜";
+
+  let i = 0;
+  const text = document.getElementById("typing");
+
+  function typeWriter() {
+    if (i < message.length) {
+      text.innerHTML += message.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+
+  typeWriter();
+}
+  </script>
 </body>
 </html>
