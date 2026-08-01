@@ -90,17 +90,20 @@ Wayne ❤️
   <div class="letter-button">
   <a href="letter.html">💌 Open Your Letter</a>
 </div>
-  <audio id="music" loop>
+  <div id="intro">
+  <h1>Happy Girlfriend Day ❤️</h1>
+  <p>Tap to open your surprise 💜</p>
+  <button onclick="startSurprise()">✨ Enter ✨</button>
+</div>
+
+<audio id="music" loop>
   <source src="love-song.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="playMusic()" class="music-btn">
-  🎵 Play our song
-</button>
-
 <script>
-function playMusic() {
+function startSurprise() {
   document.getElementById("music").play();
+  document.getElementById("intro").style.display = "none";
 }
 </script>
 </body>
