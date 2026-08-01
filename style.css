@@ -162,3 +162,22 @@ button:hover{
 .letter-button a:hover {
   transform: scale(1.1);
 }
+.letter {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 77, 136, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.letter h1 {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px pink;
+  }
+  to {
+    text-shadow: 0 0 25px red;
+  }
+    }
