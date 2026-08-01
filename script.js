@@ -1,26 +1,38 @@
-const button = document.getElementById("open");
-const letter = document.getElementById("letter");
+const button=document.getElementById("open");
+const letter=document.getElementById("letter");
+const timer=document.getElementById("timer");
 
-button.addEventListener("click", () => {
+button.addEventListener("click",()=>{
 
-    letter.style.display = "block";
+letter.style.display="block";
 
-    letter.animate(
-        [
-            {opacity:0, transform:"translateY(80px)"},
-            {opacity:1, transform:"translateY(0px)"}
-        ],
-        {
-            duration:1000,
-            fill:"forwards"
-        }
-    );
+button.innerHTML="❤️ Forever ❤️";
 
-    button.innerHTML = "❤️ Forever ❤️";
-
-    window.scrollTo({
-        top: letter.offsetTop,
-        behavior:"smooth"
-    });
+letter.scrollIntoView({
+behavior:"smooth"
+});
 
 });
+
+const start=new Date("2024-12-27T00:00:00");
+
+function updateTimer(){
+
+const now=new Date();
+
+const diff=now-start;
+
+const days=Math.floor(diff/(1000*60*60*24));
+
+const hours=Math.floor((diff/(1000*60*60))%24);
+
+const minutes=Math.floor((diff/(1000*60))%60);
+
+timer.innerHTML=
+days+" Days ❤️ "+hours+" Hours ❤️ "+minutes+" Minutes";
+
+}
+
+updateTimer();
+
+setInterval(updateTimer,60000);
