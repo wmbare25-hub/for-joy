@@ -83,3 +83,29 @@ button:hover{
     opacity:.25;
     pointer-events:none;
 }
+#hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    bottom:-30px;
+    color:#ff5a96;
+    font-size:22px;
+    animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+    from{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) scale(1.8);
+        opacity:0;
+    }
+}
