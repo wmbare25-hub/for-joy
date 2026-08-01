@@ -142,3 +142,23 @@ button:hover{
         transform: translateY(0);
     }
 }
+.letter-button {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.letter-button a {
+  background: #ff4d88;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.letter-button a:hover {
+  transform: scale(1.1);
+}
